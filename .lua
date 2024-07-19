@@ -7,7 +7,7 @@ local serv = win:Server("Main", "")
 local btns = serv:Channel("Buttons")
 
 btns:Button("TP To big chest", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210 80 -425)
+game:GetService("Workspace").Character.HumanoidRootPart.CFrame = CFrame.new(-210 80 -425)
 DiscordLib:Notification("Notification", "inf jump", "Okay!")
 end)
 
