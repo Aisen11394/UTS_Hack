@@ -6,8 +6,8 @@ local serv = win:Server("Main", "")
 
 local btns = serv:Channel("Buttons")
 
-btns:Button("inf jump", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/WweihvrM"))()
+btns:Button("TP To big chest", function()
+
 DiscordLib:Notification("Notification", "inf jump", "Okay!")
 end)
 
