@@ -58,6 +58,7 @@ local textbs = serv:Channel("Textboxes")
 
 textbs:Textbox("Set walkspeed", "Type here!", true, function(s)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+DiscordLib:Notification("Notification", "Speed changed successfully", "Okay!")
 end)
 
 textbs:Button("Change Walkspeed to normal speed", function()
