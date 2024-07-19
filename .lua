@@ -5,9 +5,9 @@ local win = DiscordLib:Window("U.T.S Hack")
 local serv = win:Server("Main", "")
 
 local btns = serv:Channel("Buttons")
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210 80 -425)
-btns:Button("TP To big chest", function()
 
+btns:Button("TP To big chest", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210 80 -425)
 DiscordLib:Notification("Notification", "inf jump", "Okay!")
 end)
 
