@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/weakhoes/Roblox-UI-Libs/main/Vanis%20Lib/Vanis%20Lib%20Source.lua'))()
 
 local Window = library:CreateWindow("UTS HACK", "Version 1.0", 10044538000)
 
