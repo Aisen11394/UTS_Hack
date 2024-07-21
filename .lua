@@ -1,203 +1,49 @@
-local Ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/drillygzzly/Roblox-UI-Libs/main/Abyss%20Lib/Abyss%20Lib%20Source.lua"))()
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
 
-local Ui = Library
+local Window = library:CreateWindow("UTS HACK", "Version 1.0", 10044538000)
 
+local Tab = Window:CreateTab("Main")
 
+local Page = Tab:CreateFrame("Page 1")
 
-local LoadTime = tick()
+Button = Page:CreateButton("Button", "Description", function()
+CreateNotification("Title", "Description", function(value)
+if value == true then
+print(true)
+else
+print(false)
+end
+end)
+end)
 
 
 
-local Loader = Library.CreateLoader(
+Toggle = Page:CreateToggle("Toggle", "Description", function(arg)
+Toggle:UpdateToggle("New Title", "New Description")
+print(arg)
+end)
 
-    "Title Here", 
 
-    Vector2.new(300, 300)
 
-)
+Bind = Page:CreateBind("KeyBind", "F", function(arg)
+Bind:UpdateBind("New Title")
+print(arg)
+end)
 
 
 
-local Window = Library.Window(
+TextBox = Page:CreateBox("TextBox", 10044538000, function(spd)
+TextBox:UpdateBox("Speed ​​changed successfully")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = spd
+end)
 
-    "Text Here", 
 
-    Vector2.new(500, 620)
 
-)
+Page:CreateSlider("Slider", 16, 500,function(arg)
+print(arg)
+end)
 
 
 
-Window.SendNotification(
-
-    "Normal", -- Normal, Warning, Error 
-
-    "Press RightShift to open menu and close menu!", 
-
-    10
-
-)
-
-
-
-Window.Watermark(
-
-    "Text Here"
-
-)
-
--- Window:Visible = true
-
-
-
--- // UI Main \\ --
-
-local Tab1 = Window:Tab("Tab1")
-
-local Section1 = Tab1:Section(
-
-    "Section1", 
-
-    "Left"
-
-)
-
-
-
-
-
-Section1:Toggle({
-
-    Title = "Toggle1", 
-
-    Flag = "Toggle_1",
-
-    Type = "Dangerous",
-
-    Callback = function(v)
-
-        print("Value = "..v)
-
-    end
-
-}): -- Toggle Keybind Below
-
-    Keybind({
-
-    Title = "KeybindToggle1",
-
-    Flag = "Keybind_Toggle_1", 
-
-    Key = Enum.UserInputType.MouseButton2, 
-
-    StateType = "Toggle"
-
-})
-
-
-
-Section1:Toggle({
-
-    Title = "Toggle2", 
-
-    Flag = "Toggle_2"
-
-    
-
-}):
-
-Colorpicker({
-
-    Color = Library.Theme.Accent[2], 
-
-    Flag = "Toggle2Color"
-
-})
-
-
-
-
-
-Section1:Slider({
-
-    Title = "Slider1", 
-
-    Flag = "Slider_1", 
-
-    Symbol = "", 
-
-    Default = 0, 
-
-    Min = 0, 
-
-    Max = 20, 
-
-    Decimals = 1,
-
-    Callback = function(v)
-
-        print("Value = "..v)
-
-    end
-
-})
-
-Section1:Dropdown({
-
-    Title = "Dropdown1", 
-
-    List = {"1", "2" ,"3"}, 
-
-    Default = "1", 
-
-    Flag = "DropDown_1",
-
-    Callback = function(v)
-
-        print("Value = "..v)
-
-    end
-
-})
-
-
-
-Section1:Button({
-
-    Title = "Button1",
-
-    Callback = function()
-
-        print("Pressed!")
-
-    end
-
-})
-
-
-
---Section1:Colorpicker({
-
-    --Title = "ColorPicker1"
-
---})
-
-
-
---Section1:Label({
-
-    --Title = "Label1"
-
---})
-
-
-
---Tab1:AddPlayerlist()
-
-Window:AddSettingsTab()
-
-Window:SwitchTab(Tab1)
-
-Window.ToggleAnime(false)
-
-LoadTime = math.floor((tick() - LoadTime) * 1000)
+Label = Page:CreateLabel("Label")
+Label:UpdateLabel("New Title")
