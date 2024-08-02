@@ -34,8 +34,10 @@ end)
 
 TextBox = Page:CreateBox("TextBox", 10044538000, function(spd)
 TextBox:UpdateBox("Speed ​​changed successfully")
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = spd
-end)
+while task.wait() do
+    game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").WalkSpeed = value
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end
 
 
 
